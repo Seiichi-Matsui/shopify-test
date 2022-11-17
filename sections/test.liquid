@@ -1,24 +1,61 @@
 <div id="textsection">
   <div class="simpletext">
-    <h1> {{ section.settings.text-box }} </h1>
-    <h3> {{ section.settings.text }} </h3>
+    <ul>
+        <li>{{ section.settings.nav1 }}</li>
+        <li>{{ section.settings.nav2 }}</li>
+        <li>{{ section.settings.nav3 }}</li>
+        <li>{{ section.settings.nav4 }}</li>
+        <li>{{ section.settings.nav5 }}</li>
+        <li>{{ section.settings.nav6 }}</li>
+        <li>{{ section.settings.nav7 }}</li>
+    </ul>
   </div>
 </div>
 {% schema %}
   {
-    "name": "Text Box",
+    "name": "navigation",
     "settings": [
       {
-        "id": "text-box",
-        "type": "text",
-        "label": "Heading",
-        "default": "Title"
+        "id": "nav1",
+        "type": "richtext",
+        "label": "nav1",
+        "default": "<p>nav1</p>"
       },
       {
-        "id": "text",
+        "id": "nav2",
         "type": "richtext",
-        "label": "Add custom text below",
-        "default": "<p>Add your text here</p>"
+        "label": "nav2",
+        "default": "<p>nav1</p>"
+      },
+      {
+        "id": "nav3",
+        "type": "richtext",
+        "label": "nav3",
+        "default": "<p>nav1</p>"
+      },
+      {
+        "id": "nav4",
+        "type": "richtext",
+        "label": "nav4",
+        "default": "<p>nav1</p>"
+      },
+      {
+        "id": "nav5",
+        "type": "richtext",
+        "label": "nav5",
+        "default": "<p>nav1</p>"
+      },
+      {
+        "id": "nav6",
+        "type": "richtext",
+        "label": "nav6",
+        "default": "<p>nav1</p>"
+      },
+      {
+        "id": "nav7",
+        "type": "richtext",
+        "label": "nav7",
+        "default": "<p>nav7</p>"
       }
     ]
   }
