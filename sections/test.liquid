@@ -1,68 +1,51 @@
-<div id="textsection">
-  <div class="simpletext">
-    <ul>
-        <li>{{ section.settings.nav1 }}</li>
-        <li>{{ section.settings.nav2 }}</li>
-        <li>{{ section.settings.nav3 }}</li>
-        <li>{{ section.settings.nav4 }}</li>
-        <li>{{ section.settings.nav5 }}</li>
-        <li>{{ section.settings.nav6 }}</li>
-        <li>{{ section.settings.nav7 }}</li>
-    </ul>
-  </div>
-</div>
+<h2>{{ section.settings.text-input | escape }}</h2>
+{% case section.settings.range %}
+    {% when 2 %}
+        <p>2です</p>
+    {% when 3 %}
+        <p>3です</p>
+    {% when 4 %}
+        <p>4です</p>
+    {% when 5 %}
+        <p>5です</p>
+{% endcase %}
+ 
+{% if section.settings.check %}
+    <p>チェックあり</p>
+{% else %}
+    <p>チェックなし</p>
+{% endif %}
+ 
 {% schema %}
-  {
-    "name": "navigation",
-    "settings": [
-      {
-        "id": "nav1",
-        "type": "richtext",
-        "label": "nav1",
-        "default": "<p>nav1</p>"
-      },
-      {
-        "id": "nav2",
-        "type": "richtext",
-        "label": "nav2",
-        "default": "<p>nav1</p>"
-      },
-      {
-        "id": "nav3",
-        "type": "richtext",
-        "label": "nav3",
-        "default": "<p>nav1</p>"
-      },
-      {
-        "id": "nav4",
-        "type": "richtext",
-        "label": "nav4",
-        "default": "<p>nav1</p>"
-      },
-      {
-        "id": "nav5",
-        "type": "richtext",
-        "label": "nav5",
-        "default": "<p>nav1</p>"
-      },
-      {
-        "id": "nav6",
-        "type": "richtext",
-        "label": "nav6",
-        "default": "<p>nav1</p>"
-      },
-      {
-        "id": "nav7",
-        "type": "richtext",
-        "label": "nav7",
-        "default": "<p>nav7</p>"
-      }
-    ]
-  }
+{
+  "name":"セクション名",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text-input",
+      "label": "テキスト入力",
+      "default": "デフォルトテキスト"
+    },
+    {
+      "type": "range",
+      "id": "range",
+      "label": "レンジ入力",
+      "min": 2,
+      "max": 5,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "checkbox",
+      "id": "check",
+      "label": "チェックボックス",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "セクション名"
+    }
+  ]
+}
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
