@@ -1,64 +1,32 @@
 <h2>TOPICS</h2>
 <ul>
-    {% for nav in section.settings %}
+    {% for nav in section.navigation %}
         <li>{{ nav.item }}</li>
     {% endfor %}
 </ul>
 
 
 <ul>
-    {% for nav in section.settings %}
+    {% for topic in section.topics %}
         <li>{{ nav.img }}</li>
     {% endfor %}
 </ul>
 
 
 {% schema %}
-  {
-    "name": "navigation",
+{
+    "name": "topics",
     "settings": [
-      {
-        "id": "nav1",
-        "type": "richtext",
-        "label": "nav1",
-        "default": "<p>nav1</p>"
-      },
-      {
-        "id": "nav2",
-        "type": "richtext",
-        "label": "nav2",
-        "default": "<p>nav1</p>"
-      },
-      {
-        "id": "nav3",
-        "type": "richtext",
-        "label": "nav3",
-        "default": "<p>nav1</p>"
-      },
-      {
-        "id": "nav4",
-        "type": "richtext",
-        "label": "nav4",
-        "default": "<p>nav1</p>"
-      },
-      {
-        "id": "nav5",
-        "type": "richtext",
-        "label": "nav5",
-        "default": "<p>nav1</p>"
-      },
-      {
-        "id": "nav6",
-        "type": "richtext",
-        "label": "nav6",
-        "default": "<p>nav1</p>"
-      },
-      {
-        "id": "nav7",
-        "type": "richtext",
-        "label": "nav7",
-        "default": "<p>nav7</p>"
-      }
+        {
+          "type": "image_picker",
+          "id": "image1",
+          "label": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image2",
+          "label": "Image"
+        }
     ]
-  }
+}
 {% endschema %}
