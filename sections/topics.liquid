@@ -6,26 +6,76 @@
 </ul>
 
 
-<ul>
-    {% for topic in section.topics %}
-        <li>{{ nav.img }}</li>
-    {% endfor %}
-</ul>
-
 
 {% schema %}
 {
-    "name": "topics",
+    "name": "navigation",
     "settings": [
         {
-          "type": "image_picker",
-          "id": "image1",
-          "label": "Image"
+          "id": "nav1",
+          "type": "richtext",
+          "label": "nav1",
+          "default": "<p>ALL</p>"
         },
         {
-          "type": "image_picker",
-          "id": "image2",
-          "label": "Image"
+          "id": "nav2",
+          "type": "richtext",
+          "label": "nav1",
+          "default": "<p>NEW ITEM</p>"
+        },
+        {
+          "id": "nav3",
+          "type": "richtext",
+          "label": "nav1",
+          "default": "<p>VOICE</p>"
+        },
+        {
+          "id": "nav4",
+          "type": "richtext",
+          "label": "nav1",
+          "default": "<p>LIMITED</p>"
+        },
+        {
+          "id": "nav5",
+          "type": "richtext",
+          "label": "nav1",
+          "default": "<p>CAMPAIGN</p>"
+        },
+        {
+          "id": "nav6",
+          "type": "richtext",
+          "label": "nav1",
+          "default": "<p>COLLECTION</p>"
+        },
+        {
+          "id": "nav7",
+          "type": "richtext",
+          "label": "nav1",
+          "default": "<p>INFORMATION</p>"
+        },
+        {
+          "id": "nav8",
+          "type": "richtext",
+          "label": "nav1",
+          "default": "<p>BESTCOSME</p>"
+        },
+        {
+          "id": "nav9",
+          "type": "richtext",
+          "label": "nav1",
+          "default": "<p>YOUTUBE</p>"
+        },
+        {
+          "id": "nav10",
+          "type": "richtext",
+          "label": "nav1",
+          "default": "<p>GIFT</p>"
+        },
+        {
+          "id": "nav11",
+          "type": "richtext",
+          "label": "nav1",
+          "default": "<p>ELEGANCE RAZZLE</p>"
         }
     ]
 }
